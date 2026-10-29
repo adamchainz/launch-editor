@@ -156,7 +156,7 @@ wheels = [
 ]
 
 [[package]]
-name = "launch-editor"
+name = "launch-editor-py"
 version = "0.0.0"
 source = { editable = "." }
 

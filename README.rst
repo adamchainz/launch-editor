@@ -1,15 +1,15 @@
-=============
-launch-editor
-=============
+================
+launch-editor-py
+================
 
-.. image:: https://img.shields.io/github/actions/workflow/status/adamchainz/launch-editor/main.yml.svg?branch=main&style=for-the-badge
-   :target: https://github.com/adamchainz/launch-editor/actions?workflow=CI
+.. image:: https://img.shields.io/github/actions/workflow/status/adamchainz/launch-editor-py/main.yml.svg?branch=main&style=for-the-badge
+   :target: https://github.com/adamchainz/launch-editor-py/actions?workflow=CI
 
 .. image:: https://img.shields.io/badge/Coverage-100%25-success?style=for-the-badge
-   :target: https://github.com/adamchainz/launch-editor/actions?workflow=CI
+   :target: https://github.com/adamchainz/launch-editor-py/actions?workflow=CI
 
-.. image:: https://img.shields.io/pypi/v/launch-editor.svg?style=for-the-badge
-   :target: https://pypi.org/project/launch-editor/
+.. image:: https://img.shields.io/pypi/v/launch-editor-py.svg?style=for-the-badge
+   :target: https://pypi.org/project/launch-editor-py/
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge
    :target: https://github.com/psf/black
@@ -43,7 +43,9 @@ Installation
 
    .. code-block:: sh
 
-       python -m pip install launch-editor
+       python -m pip install launch-editor-py
+
+   The package imports as ``launch_editor``.
 
 Usage
 -----
@@ -181,7 +183,7 @@ Such an endpoint runs a program, so protect it:
 Filenames are passed to editors as absolute paths, so a name starting with ``-`` cannot be interpreted as an option.
 
 On Windows, editors launched through batch files, such as VS Code’s ``code.cmd``, run through ``cmd.exe``, which has its own command line parsing.
-To prevent command injection, launch-editor quotes every argument and refuses to pass arguments containing ``"``, ``%``, ``!``, or line breaks to them.
+To prevent command injection, launch-editor-py quotes every argument and refuses to pass arguments containing ``"``, ``%``, ``!``, or line breaks to them.
 UNC paths are also refused on Windows, like the npm package, to avoid leaking NTLM credentials to remote hosts—see `its explanation <https://github.com/vitejs/launch-editor/tree/main/packages/launch-editor#unc-paths-on-windows>`__.
 
 Differences from the launch-editor npm package
