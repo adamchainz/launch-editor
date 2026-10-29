@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "launch-editor-py"
-version = "0.0.0"
+version = "1.0.0"
 description = "Open files in the user’s editor, optionally at a given line and column."
 readme = "README.rst"
 keywords = [
